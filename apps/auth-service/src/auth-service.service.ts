@@ -31,6 +31,8 @@ export class AuthServiceService implements OnModuleInit {
 
   async register(email: string, password: string, name: string) {
     // check if user exists
+    console.log(email);
+
     const exitingUser = await this.dbService.db
       .select()
       .from(users)

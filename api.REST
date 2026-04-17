@@ -1,11 +1,11 @@
-@baseUrl=http://localhost:3001
+@baseUrl=http://localhost:3000
 @Content-Type=application/json
 
-POST {{baseUrl}}/register
+POST {{baseUrl}}/auth/register
 Content-Type: {{Content-Type}}
 
 {
-  "name": "testuser2",
-  "email": "test2@gmail.com",
-    "password": "testpassword"
+  "name": "tom",
+  "email": "tom2222@gmail.com",
+    "password": "testpass2212#^$%word"
     }
