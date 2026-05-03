@@ -8,6 +8,13 @@
       "when": 1776005896399,
       "tag": "0000_soft_tomorrow_man",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1777794605916,
+      "tag": "0001_clever_la_nuit",
+      "breakpoints": true
     }
   ]
 }
