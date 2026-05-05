@@ -1,0 +1,31 @@
+@baseUrl=http://localhost:3000
+@Content-Type=application/json
+
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5MzliMDZlZC1hYmQ2LTQzOTAtYTc3Zi0zM2Y4ZTMxOWMxOGEiLCJlbWFpbCI6Imhhc3NhbTEyQGdtYWlsLmNvbSIsImlhdCI6MTc3Nzk5NDU1OCwiZXhwIjoxNzc4MDgwOTU4fQ.MAUkkUIeW847wmpMTmGVKLpYr91wfthrjF1f3UZ3sbA
+
+### Register
+POST {{baseUrl}}/auth/register
+Content-Type: {{Content-Type}}
+
+{
+  "name": "Hassam",
+  "email": "hassam12@gmail.com",
+  "password": "hassam123"
+}
+
+### Login
+POST {{baseUrl}}/auth/login
+Content-Type: {{Content-Type}}
+
+{
+  "email": "hassam12@gmail.com",
+  "password": "hassam123"
+}
+
+### Profile
+GET {{baseUrl}}/auth/profile
+Content-Type: {{Content-Type}}
+Authorization: Bearer {{token}}
+
+
+

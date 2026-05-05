@@ -1,0 +1,51 @@
+@baseUrl=http://localhost:3000
+@Content-Type=application/json
+
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5MzliMDZlZC1hYmQ2LTQzOTAtYTc3Zi0zM2Y4ZTMxOWMxOGEiLCJlbWFpbCI6Imhhc3NhbTEyQGdtYWlsLmNvbSIsImlhdCI6MTc3Nzk5NDU1OCwiZXhwIjoxNzc4MDgwOTU4fQ.MAUkkUIeW847wmpMTmGVKLpYr91wfthrjF1f3UZ3sbA
+@eventId=e714fc12-a78c-4538-8a11-80f40bde4b57
+
+###Create Event
+POST {{baseUrl}}/events
+Content-Type: {{Content-Type}}
+Authorization: Bearer {{token}}
+
+{
+  "title": "Tech Meetup 2025",
+  "description": "Monthly technology meetup for developers.",
+  "date": "2025-01-15T18:00:00Z",
+  "location": "Downtown Convention Center",
+  "capacity": 100,
+  "price": 0
+}
+
+### My events
+GET  {{baseUrl}}/events
+Content-Type: {{Content-Type}}
+Authorization: Bearer {{token}}
+
+
+###Edit Event
+PUT {{baseUrl}}/events/{{eventId}}
+Content-Type: {{Content-Type}}
+Authorization: Bearer {{token}}
+
+{
+  "title": "Tech Meetup 2025 - Updated",
+  "capacity": 150
+}
+
+###Publish Event
+POST {{baseUrl}}/events/{{eventId}}/publish
+Content-Type: {{Content-Type}}
+Authorization: Bearer {{token}}
+
+###Cancel Event
+POST {{baseUrl}}/events/{{eventId}}/cancel
+Content-Type: {{Content-Type}}
+Authorization: Bearer {{token}}
+
+###Public Events
+GET {{baseUrl}}/events
+
+###Get Event By Id
+GET {{baseUrl}}/events/{{eventId}}

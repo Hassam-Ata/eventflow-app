@@ -10,7 +10,7 @@ export class AuthService {
 
   async register(data: { email: string; password: string; name: string }) {
     try {
-      console.log('ji');
+     
       const response = await firstValueFrom(
         this.httpService.post(`${this.authServiceUrl}/register`, data),
       );
